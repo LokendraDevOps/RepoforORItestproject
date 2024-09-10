@@ -1,5 +1,5 @@
 pipeline {
-    agent { lable 'Slave-1' }
+    agent {label 'slave-1'}
     environment {
         APP_NAME = "SimpleWebApp"
         DEPLOY_DIR = "/var/www/html"
@@ -13,7 +13,7 @@ pipeline {
             stage('copy files') {
                 steps {
                 sh 'sudo cp -rf . /var/www/html/'
-                }
             }
         }
     }
+}
