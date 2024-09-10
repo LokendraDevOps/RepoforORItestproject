@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent {lable 'Slave-1'}
     environment {
         APP_NAME = "SimpleWebApp"
         DEPLOY_DIR = "/var/www/html"
