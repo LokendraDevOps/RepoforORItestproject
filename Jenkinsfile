@@ -1,0 +1,19 @@
+pipeline {
+    agent any
+    environment {
+        APP_NAME = "SimpleWebApp"
+        DEPLOY_DIR = "/var/www/html"
+        }
+        stages {
+            stage('Checkout') {
+                steps {
+                    git branch: 'main', url: 'https://github.com/LokendraDevOps/RepoforORItestproject.git'
+                }
+            }
+            stage('copy files') {
+                steps {
+                sh 'cp -rf . /var/www/html/'
+                }
+            }
+        }
+    }
