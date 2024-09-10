@@ -12,7 +12,7 @@ pipeline {
             }
             stage('copy files') {
                 steps {
-                sh 'cp -rf . /var/www/html/'
+                sh 'sudo cp -rf . /var/www/html/'
                 }
             }
         }
